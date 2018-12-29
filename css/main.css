@@ -1,6 +1,7 @@
 html, body, #cesiumContainer {
   width: 100%;
   height: 100%;
+  font-size: 12px;
 }
 
 body {
@@ -10,20 +11,49 @@ body {
 #baselayerContainer {
   position: absolute;
   width: auto;
-  height: 40px;
-  background-color: red;
+  box-shadow: 2px 2px 3px black;
   bottom: 20px;
   left: 20px;
+  line-height: 0;
 }
 
-#baselayerContainer img {
-  width: 70px;
-  height: 40px;
+#baselayerContainer > div {
+  cursor: pointer;
   display: none;
 }
-#baselayerContainer img:first-of-type {
+#baselayerContainer img{
+  width: 90px;
+  height: 60px;
+}
+#baselayerContainer .selected {
   display: inline-block;
 }
-#baselayerContainer:hover img {
+
+#baselayerContainer:hover div {
   display: inline-block;
+}
+
+.bas-img:after {
+  content: "影像底图";
+  position: absolute;
+  display: block;
+  width: 90px;
+  bottom: 0;
+  text-align: center;
+  height: 20px;
+  line-height: 20px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.bas-vec:after {
+  content: "电子底图";
+  position: absolute;
+  display: block;
+  width: 90px;
+  bottom: 0;
+  text-align: center;
+  height: 20px;
+  line-height: 20px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
 }
